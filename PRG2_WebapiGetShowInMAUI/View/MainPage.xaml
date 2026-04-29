@@ -3,32 +3,62 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PRG2_WebapiGetShowInMAUI.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
-            <Entry Placeholder="Enter amount of products (max 20)" x:Name="EntryProductAmount"/>
-            <Button Text="View products" Clicked="ButtonProductAmount"/>
-            <CollectionView x:Name="ProductsView">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Frame Margin="10" BorderColor="Gray" CornerRadius="10">
-                            <StackLayout Spacing="10">
-                                <Image Source="{Binding Image}" HeightRequest="100" Aspect="AspectFit"/>
-                                <Label Text="{Binding Title}" FontAttributes="Bold"/>
-                                <Label Text="{Binding Price, StringFormat='Pris: {0} kr'}"/>
-                                <Label Text="{Binding Description}" LineBreakMode="TailTruncation" MaxLines="3"/>
-                                <Label Text="{Binding Category, StringFormat='Category: {0}'}" FontAttributes="Italic"/>
-                                <HorizontalStackLayout Spacing="10">
-                                    <Button Text="Read more"/>
-                                    <Button Text=" Add to cart"/>
-                                </HorizontalStackLayout>
-                                
-                            </StackLayout>
-                        </Frame>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </VerticalStackLayout>
-    </ScrollView>
+    <Grid 
+    RowDefinitions="Auto, Auto, *" 
+    ColumnDefinitions="*"
+    Padding="10"
+    RowSpacing="20">
+
+        <Entry Grid.Row="0"
+           Placeholder="Enter amount of products (max 20)"
+           x:Name="EntryProductAmount"/>
+
+        <Button Grid.Row="1"
+            Text="View products"
+            Clicked="ButtonProductAmount"/>
+
+        <CollectionView Grid.Row="2"
+                    x:Name="ProductsView">
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical"
+                               ItemSpacing="5"/>
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Stroke="Gray"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 10"
+                        Padding="10">
+
+                        <VerticalStackLayout Spacing="10">
+                            <Image Source="{Binding Image}"
+                               HeightRequest="100"
+                               Aspect="AspectFit"/>
+
+                            <Label Text="{Binding Title}"
+                               FontAttributes="Bold"/>
+
+                            <Label Text="{Binding Price, StringFormat='Pris: {0} kr'}"/>
+
+                            <Label Text="{Binding Description}"
+                               LineBreakMode="TailTruncation"
+                               MaxLines="3"/>
+
+                            <Label Text="{Binding Category, StringFormat='Category: {0}'}"
+                               FontAttributes="Italic"/>
+
+                            <HorizontalStackLayout Spacing="10">
+                                <Button Text="Read more"/>
+                                <Button Text="Add to cart"/>
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+    </Grid>
 </ContentPage>

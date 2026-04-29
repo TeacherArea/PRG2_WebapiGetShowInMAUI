@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PRG2_WebapiGetShowInMAUI</name>
+    </assembly>
+    <members>
+        <member name="T:PRG2_WebapiGetShowInMAUI.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+    </members>
+</doc>

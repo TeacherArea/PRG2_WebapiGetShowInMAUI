@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PRG2_WebapiGetShowInMAUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+3da88be72fdea4751a3ee6a6b3e0437c6c1ae741")]
 [assembly: System.Reflection.AssemblyProductAttribute("PRG2_WebapiGetShowInMAUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PRG2_WebapiGetShowInMAUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
